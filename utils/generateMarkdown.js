@@ -34,12 +34,14 @@ function renderLicenseSection(license) {
 
   return `## License
 
-This project is licensed per the license provided in the **${license}** file. 
+This project is licensed under the **${license}** license. 
 Please visit [${license}](${renderLicenseLink(license)}) for additional information.`            
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ${renderLicenseBadge(data.license)}
+
   ## Description
   ${data.description}
 
@@ -68,7 +70,7 @@ function generateMarkdown(data) {
 
   ## Contact
   If you have any questions, you can contact me at:
-    -Github: [${data.github}](https://github.com${data.github})
+    -Github: [${data.github}](https://github.com/${data.github})
     -Email: [${data.email}](mailto:${data.email})
 `;
 }

@@ -5,15 +5,45 @@ import generateMarkdown from './utils/generateMarkdown.js';
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {type: 'input', name: 'title', message: 'Project Title:'},
-    {type: 'input', name: 'description', message: 'Description of project:'},
-    {type: 'input', name: 'installation', message: 'Instructions for installation:'},
-    {type: 'input', name: 'usage', message: 'Usage outline:'},
+    {
+        type: 'input', 
+        name: 'title', 
+        message: 'Project Title:',
+        validate: input => input ? true : 'Please enter a project title.'
+    },
+    {
+        type: 'input', 
+        name: 'description', 
+        message: 'Description of project:',
+        validate: input => input ? true : 'Please enter a project description.'
+    },
+    {
+        type: 'input', 
+        name: 'installation', 
+        message: 'Instructions for installation:',
+        validate: input => input ? true : 'Please enter installation instructions.'
+    },
+    {
+        type: 'input',
+        name: 'usage', 
+        message: 'Usage outline:',
+        validate: input => input ? true : 'Please enter usage information.',
+    },
     {type: 'list', name: 'license', message: 'Choose a license:', choices: ['MIT', 'APACHE 2.0', 'GPL v3', 'None']},
     {type: 'input', name: 'contribution', message: 'Guidelines for contribution:'},
     {type: 'input', name: 'test', message: 'Instructions for testing:'},
-    {type: 'input', name: 'github', message: 'GitHub username:'},
-    {type: 'input', name: 'email', message: 'Email Address:'},
+    {
+        type: 'input', 
+        name: 'github', 
+        message: 'GitHub username:',
+        validate: input => input ? true : 'Please enter your GitHub username.',
+    },
+    {
+        type: 'input', 
+        name: 'email', 
+        message: 'Email Address:',
+        validate: input => input ? true : 'Please enter your email address.',
+    },
 ];
 
 // TODO: Create a function to write README file
