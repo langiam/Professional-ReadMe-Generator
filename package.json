@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "static-site",
   "version": "1.0.0",
   "description": "",
@@ -12,9 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "8.2.4"
-=======
-  "dependencies": {
-    "inquirer": "^12.4.1"
->>>>>>> 6db7394dbf80a04f248eabc80f822bf02a5d0cad
   }
 }
